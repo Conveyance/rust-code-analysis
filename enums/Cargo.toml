@@ -1,0 +1,24 @@
+[package]
+name = "enums"
+version = "0.0.1"
+authors = ["Calixte Denizet <cdenizet@mozilla.com>"]
+edition = "2021"
+
+[dependencies]
+clap = { version = "^4.0", features = ["derive"] }
+askama = "^0.11"
+
+tree-sitter = "=0.22.2"
+tree-sitter-java = {path = "../tree-sitter-java", version = "=0.20.2"}
+tree-sitter-javascript = {path="../tree-sitter-javascript", version = "=0.20.4"}
+tree-sitter-python = {path="../tree-sitter-python", version = "=0.21"}
+tree-sitter-typescript = {path="../tree-sitter-typescript",version = "0.20.6"}
+tree-sitter-rust = {path = "../tree-sitter-rust",version = "=0.20.4"}
+tree-sitter-preproc = { path = "../tree-sitter-preproc", version = "=0.20.1" }
+tree-sitter-ccomment = { path = "../tree-sitter-ccomment", version = "=0.20.1" }
+tree-sitter-mozcpp = { path = "../tree-sitter-mozcpp", version = "=0.20.2" }
+tree-sitter-mozjs = { path = "../tree-sitter-mozjs", version = "=0.20.1" }
+tree-sitter-nix = { path = "../tree-sitter-nix", version = "=0.0.1"}
+
+[profile.release]
+strip = "debuginfo"
